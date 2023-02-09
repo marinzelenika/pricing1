@@ -1,0 +1,72 @@
+{{ with resources.GetRemote
+$.Site.Params.url }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
+.Content }} {{ with transform.Unmarshal . }}
+
+
+{{ range . }}
+<h4>{{ .Name }}</h4>
+{{ $url := print "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-" "" .Name }}
+{{ with resources.GetRemote $url }}
+
+
+
+{{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with
+.Content }} {{ with transform.Unmarshal . }}
+
+{{ range .Products }}
+  <p>{{ .Name }}</p>
+  {{ range first 1 .PricingPlans }}
+    {{ $displayOrder := int .DisplayOrder }} 
+    {{ if not (lt $displayOrder 0) }} {{ if or (not (strings.Contains .Name "Metered")) }}
+      
+      {{ range .PaymentScheduleList }}
+      {{ $charge := .SubscriptionPeriodCharge }}
+      {{ $charge }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+{{ end }}
+
+{{ end }}{{ end }}{{ end }}{{ end }}
+
+{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
+
+<div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <img class="product-icon" src="https://www.aspose.cloud/templates/aspose/App_Themes/V3/images/total/272x272/aspose_total-for-net-min.png" width="50" height="50">
+        <h5 class="card-title"><strong>Aspose.Total</strong></h5>
+        <p class="card-text">Manipulate Word, Excel, PDF, PowerPoint, Outlook and more than 100 other file formats using our native APIs for .NET, Java, Android, C++ and other Platforms.</p>
+        <p class="card-text">From <br> <strong style="font-size: x-large; color:black;">3999 USD</strong> <br>per platform, per year </p>
+        
+        <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Choose a platform
+  </a>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+    <div class="hr-or">
+  <span>or</span>
+</div>
+
+<span style="font-size: x-small; color: gray;">Get all platforms in a family pack starting from </span> <br> <strong style="font-size: x-large;">5999 USD</strong>
+
+        <div class="d-flex justify-content-center">
+        <a href="#" class="btn btn-primary btn-lg fam-pack-btn"><span style="margin: auto;">Select family pack</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  </div>
+
