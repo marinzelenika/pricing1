@@ -1,0 +1,95 @@
+{{ define "main" }}
+<div class="container">
+{{ with resources.GetRemote
+"https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false&enabledPPPOn=&clientkey=a&signature=jc_xWmdMtA-nMA2Bgp9vuEV0Kn0"
+}} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+transform.Unmarshal . }}
+
+<div class="row">
+  {{ range . }}
+  <div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card mt-3 mb-3">
+      <div class="card-body">
+        {{ $imgUrl := substr .SmallLogoImageSrc 2 }}
+        <img
+          class="product-icon"
+          src="{{ printf "https://%s" $imgUrl }}"
+          width="50"
+          height="50"
+        />
+        <h5 class="card-title"><strong>{{ .Name }}</strong></h5>
+
+
+        <p class="card-text">
+          Manipulate Word, Excel, PDF, PowerPoint, Outlook and more than 100
+          other file formats using our native APIs for .NET, Java, Android, C++
+          and other Platforms.
+        </p>
+        <p class="card-text">
+          From <br />
+          <strong style="font-size: x-large; color: black">3999 USD</strong>
+          <br />per platform, per year
+        </p>
+
+        <div class="dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Choose a platform
+          </a>
+          {{ $url := print
+          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
+          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
+          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+          transform.Unmarshal . }}
+
+          <ul class="dropdown-menu">
+            {{ range .Products }}
+            {{ $split := split .Name "." }}
+          {{ $split1 := index $split 1 }}
+          {{ $split2 := split $split1 " " }}
+          {{ $words1 := index $split2 0 }}
+          {{ $family1 := index $split2 2 }}
+          {{ $link1 := print "https://purchase.aspose.com/pricing/" $words1 "/" $family1 }}
+            <li><a class="dropdown-item" href="{{ printf "/pricing/%s" .Name }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+          {{ end }} {{ end }}{{ end }}{{ end }}
+        </div>
+
+        <div class="hr-or">
+          <span>or</span>
+        </div>
+
+        <span style="font-size: x-small; color: gray;"
+          >Get all platforms in a family pack starting from
+        </span>
+        <br />
+        <strong style="font-size: x-large">5999 USD</strong>
+
+        <div class="d-flex justify-content-center">
+          {{ $splitted := split .Name "." }}
+          {{ $splitted1 := index $splitted 1 }}
+          {{ $splitted2 := split $splitted1 " " }}
+          {{ $words := index $splitted2 0 }}
+          {{ $family := index $splitted2 2 }}
+          {{ $link := print "https://purchase.aspose.com/pricing/" $words "/" $family }}
+          
+          <a href="{{ $link | lower }}" class="btn btn-primary btn-lg fam-pack-btn"
+            ><span style="margin: auto">Select family pack</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ end }}
+</div>
+{{ end }}{{ end }}{{ end }}{{ end }}
+
+</div>
+{{ end }}
