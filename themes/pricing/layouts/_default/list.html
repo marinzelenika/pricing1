@@ -19,13 +19,31 @@ transform.Unmarshal . }}
         />
         <h5 class="card-title"><strong>{{ .Name }}</strong></h5>
 
-        
         <p class="card-text">
           {{ .Description }}
         </p>
         <p class="card-text">
           From <br />
-          <strong style="font-size: x-large; color: black">3999 USD</strong>
+          {{ $url := print
+          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
+          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
+          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+          transform.Unmarshal . }}
+        {{ $one := index .Products 2 }}
+        
+        {{ range .PricingPlans }} 
+        {{ $displayOrder := int .DisplayOrder }} 
+    {{ if not (lt $displayOrder 0) }} {{ if or (not (strings.Contains .Name "Metered")) }}
+        {{ range .PaymentScheduleList }}
+          <strong style="font-size: x-large; color: black">{{ .SubscriptionPeriodCharge }} USD</strong>
+          {{ end }}
+          
+        
+          {{ end }}
+          {{ end }}
+    
+        {{ end }}
+        {{ end }} {{ end }}{{ end }}{{ end }}
           <br />{{ $.Page.Params.per }}
         </p>
 
@@ -67,8 +85,21 @@ transform.Unmarshal . }}
           >Get all platforms in a family pack starting from
         </span>
         <br />
-        <strong style="font-size: x-large">5999 USD</strong>
-
+        {{ $url := print
+          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
+          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
+          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+          transform.Unmarshal . }}
+        {{ range .Products }}
+        {{ if strings.Contains .Name "Family" }}
+        {{ range first 1 .PricingPlans }}
+        {{ range .PaymentScheduleList }}
+        <strong style="font-size: x-large">{{ .SubscriptionPeriodCharge }} USD</strong>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }} {{ end }}{{ end }}{{ end }}
         <div class="d-flex justify-content-center">
           {{ $splitted := split .Name "." }}
           {{ $splitted1 := index $splitted 1 }}
