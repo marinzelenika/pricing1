@@ -23,3 +23,10 @@ draft = "false"
   url = "/pricing/:Name"
   weight = 2
   parent = "main"
+
+defaultContentLanguage = 'en'
+[languages]
+  [languages.en]
+    title = "My New Hugo i18n Site"
+    languageName = "English"
+    weight = 1

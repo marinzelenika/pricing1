@@ -19,16 +19,14 @@ transform.Unmarshal . }}
         />
         <h5 class="card-title"><strong>{{ .Name }}</strong></h5>
 
-
+        
         <p class="card-text">
-          Manipulate Word, Excel, PDF, PowerPoint, Outlook and more than 100
-          other file formats using our native APIs for .NET, Java, Android, C++
-          and other Platforms.
+          {{ .Description }}
         </p>
         <p class="card-text">
           From <br />
           <strong style="font-size: x-large; color: black">3999 USD</strong>
-          <br />per platform, per year
+          <br />{{ $.Page.Params.per }}
         </p>
 
         <div class="dropdown">
