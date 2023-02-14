@@ -18,10 +18,11 @@ transform.Unmarshal . }}
           height="50"
         />
         <h5 class="card-title"><strong>{{ .Name }}</strong></h5>
-
         <p class="card-text">
-          {{ .Description }}
+            {{ $descc := print "desc-" "" .Name }}
+            {{ i18n $descc . }}
         </p>
+       
         <p class="card-text">
           From <br />
           {{ $url := print

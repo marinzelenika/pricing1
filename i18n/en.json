@@ -1,0 +1,31 @@
+[
+  {
+    "desc-Aspose.Total Product Family": {
+      "other": "Manipulate Word, Excel, PDF, PowerPoint, Outlook and more than 100 other file formats using our native APIs for .NET, Java, Android, C++ and other Platforms."
+    },
+    "desc-Aspose.Words Product Family": {
+      "other": "Native APIs to create, edit, convert & print Word documents from any Desktop, Web or Mobile application."
+    },
+    "desc-Aspose.Cells Product Family": {
+      "other": "Native APIs to create, edit, convert & render Excel files. Export spreadsheets to multiple formats on any platform."
+    },
+    "desc-Aspose.PDF Product Family": {
+      "other": "Native APIs to generate, manipulate, compress, secure or convert PDF files to multiple formats without Adobe Acrobat."
+    },
+    "desc-Aspose.Slides Product Family": {
+      "other": "Native APIs for .NET, Java, C++ & Android to generate, manage and convert PowerPoint Presentations & Slides."
+    },
+    "desc-Aspose.Email Product Family": {
+      "other": "Native APIs to create, manipulate & convert Outlook email & storage files. Implement network protocols such as SMTP, POP3 & IMAP."
+    },
+    "desc-Aspose.BarCode Product Family": {
+      "other": "Develop high-performance apps with the ability to create & scan 1D, 2D and Postal barcode labels."
+    },
+    "desc-Aspose.Imaging Product Family": {
+      "other": "Native APIs to draw, manipulate, transform & convert images."
+    },
+    "desc-Aspose.HTML Product Family": {
+      "other": "Native APIs to Generate, Read and Edit HTML pages including CSS styles as well as Convert to PDF and multiple image formats."
+    }
+  }
+]
