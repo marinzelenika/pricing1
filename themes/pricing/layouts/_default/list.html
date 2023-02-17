@@ -17,7 +17,9 @@ transform.Unmarshal . }}
           width="50"
           height="50"
         />
-        <h5 class="card-title"><strong>{{ .Name }}</strong></h5>
+        {{ $split := split .Name " " }}
+        {{ $splitName := index $split 0 }}
+        <h5 class="card-title"><strong>{{ $splitName }}</strong></h5>
         <p class="card-text">
             {{ $descc := print "desc-" "" .Name }}
             {{ i18n $descc . }}
@@ -82,7 +84,7 @@ transform.Unmarshal . }}
           <span>or</span>
         </div>
 
-        <span style="font-size: x-small; color: gray;"
+        <span style="font-size: xx-small; word-spacing: 0.01px; color: gray;"
           >Get all platforms in a family pack starting from
         </span>
         <br />
