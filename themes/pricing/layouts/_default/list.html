@@ -27,27 +27,24 @@ transform.Unmarshal . }}
        
         <p class="card-text">
           From <br />
-          {{ $url := print
-          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
-          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
-          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
-          transform.Unmarshal . }}
-        {{ $one := index .Products 2 }}
-        
-        {{ range .PricingPlans }} 
-        {{ $displayOrder := int .DisplayOrder }} 
-    {{ if not (lt $displayOrder 0) }} {{ if or (not (strings.Contains .Name "Metered")) }}
-        {{ range .PaymentScheduleList }}
-          <strong style="font-size: x-large; color: black">{{ .SubscriptionPeriodCharge }} USD</strong>
-          {{ end }}
           
-        
-          {{ end }}
-          {{ end }}
-    
-        {{ end }}
-        {{ end }} {{ end }}{{ end }}{{ end }}
-          <br />{{ $.Page.Params.per }}
+            
+         
+          
+
+
+            {{ $name := .Name }}
+            {{ $dataJ := getJSON "data/products.json" }}
+            {{ range $dataJ }}
+            {{ range .products }}
+            {{ if eq .name $name }}
+            <strong style="font-size: x-large; color: black">{{ .price }} USD</strong>
+            {{end}}
+            {{end}}
+            {{end}}
+
+
+          <br />per platform, per year
         </p>
 
         <div class="dropdown">
@@ -84,10 +81,7 @@ transform.Unmarshal . }}
           <span>or</span>
         </div>
 
-        <span style="font-size: xx-small; word-spacing: 0.01px; color: gray;"
-          >Get all platforms in a family pack starting from
-        </span>
-        <br />
+        
         {{ $url := print
           "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
           "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
@@ -97,7 +91,12 @@ transform.Unmarshal . }}
         {{ if strings.Contains .Name "Family" }}
         {{ range first 1 .PricingPlans }}
         {{ range .PaymentScheduleList }}
+        <span style="font-size: xx-small; word-spacing: 0.01px; color: gray;"
+          >Get all platforms in a family pack starting from
+        </span>
+        <br />
         <strong style="font-size: x-large">{{ .SubscriptionPeriodCharge }} USD</strong>
+
         {{ end }}
         {{ end }}
         {{ end }}
