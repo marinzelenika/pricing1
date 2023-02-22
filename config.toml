@@ -4,25 +4,17 @@ title = 'My New Hugo Site'
 theme = 'pricing'
 draft = "false"
 
-  [module]
-    [[module.mounts]]
-      source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-      target = "assets/js/bootstrap.bundle.min.js"
+[module]
+  [[module.mounts]]
+    source = 'prebuild/public/product'
+    target = 'content'
+  [[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"
 
 [params]
     url = "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false&enabledPPPOn=&clientkey=a&signature=jc_xWmdMtA-nMA2Bgp9vuEV0Kn0"
 
-[[menu.main]]
-  name = "main"
-  url = "/"
-  weight = 1
-  identifier = "main"
-
-[[menu.main]]
-  name = "pricing"
-  url = "/pricing/:Name"
-  weight = 2
-  parent = "main"
 
 defaultContentLanguage = 'en'
 [languages]

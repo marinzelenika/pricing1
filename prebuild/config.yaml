@@ -1,0 +1,18 @@
+# config.yaml
+disableKinds:
+- sitemap
+- taxonomy
+- term
+outputs:
+  home:
+  - html
+  - json
+params:
+  file_format: json
+
+module:
+  mounts:
+  - source: content
+    target: content
+  - source: prebuild/public/product
+    target: content

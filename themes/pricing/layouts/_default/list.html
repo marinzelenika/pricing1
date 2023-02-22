@@ -27,12 +27,6 @@ transform.Unmarshal . }}
        
         <p class="card-text">
           From <br />
-          
-            
-         
-          
-
-
             {{ $name := .Name }}
             {{ $dataJ := getJSON "data/products.json" }}
             {{ range $dataJ }}
@@ -42,8 +36,6 @@ transform.Unmarshal . }}
             {{end}}
             {{end}}
             {{end}}
-
-
           <br />per platform, per year
         </p>
 
@@ -57,24 +49,15 @@ transform.Unmarshal . }}
           >
             Choose a platform
           </a>
-          {{ $url := print
-          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
-          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
-          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
-          transform.Unmarshal . }}
+          
 
           <ul class="dropdown-menu">
-            {{ range .Products }}
-            {{ $split := split .Name "." }}
-          {{ $split1 := index $split 1 }}
-          {{ $split2 := split $split1 " " }}
-          {{ $words1 := index $split2 0 }}
-          {{ $family1 := index $split2 2 }}
-          {{ $link1 := print "https://purchase.aspose.com/pricing/" $words1 "/" $family1 }}
-            <li><a class="dropdown-item" href="{{ printf "/pricing/%s" .Name }}">{{ .Name }}</a></li>
+            
+            {{ range $.Site.Pages }}
+            <li><a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Name }}</a></li>
             {{ end }}
           </ul>
-          {{ end }} {{ end }}{{ end }}{{ end }}
+          
         </div>
 
         <div class="hr-or">
