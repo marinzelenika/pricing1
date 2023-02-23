@@ -19,6 +19,6 @@ draft = "false"
 defaultContentLanguage = 'en'
 [languages]
   [languages.en]
-    title = "My New Hugo i18n Site"
+    title = "Pricing information"
     languageName = "English"
     weight = 1

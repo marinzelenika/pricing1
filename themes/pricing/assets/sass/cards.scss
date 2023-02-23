@@ -76,3 +76,21 @@
   border-radius: 10px;
   box-shadow: 5px 10px 15px 3px rgba(0,0,0,0.1);
 }
+.nav-item {
+  font-size: small;
+  border-radius: 18px;
+  padding: 5px;
+}
+.nav-link{
+  border-radius: 20px !important;
+}
+#myTab .nav-link.active, #myTab .nav-link:hover {
+  background-color: $primary;
+  color: white;
+}
+.btn {
+  color: white !important;
+  border-radius: 18px !important;
+  width: 55% !important;
+  font-size: small !important;
+}

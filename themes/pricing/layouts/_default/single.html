@@ -1,6 +1,22 @@
 {{ define "main" }}
 <div class="container">
-<h5>{{ .Params.Name }}</h5>
-<p>{{ .Params.Description }}</p>
+  <h5>{{ .Params.Name }}</h5>
+  <p>{{ .Params.Description }}</p>
+
+  <div class="m-5">
+    <ul class="nav nav-pills menu justify-content-center" id="myTab">
+      <li class="nav-item active">
+        <a href="#yearly" class="nav-link active">Yearly</a>
+      </li>
+      <li class="nav-item">
+        <a href="#payperuse" class="nav-link">Pay per use</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content">
+    {{ partial "first-tab" . }}
+    {{ partial "second-tab" . }}
+  </div>
 </div>
 {{ end }}

@@ -10,9 +10,4 @@ outputs:
 params:
   file_format: json
 
-module:
-  mounts:
-  - source: content
-    target: content
-  - source: prebuild/public/product
-    target: content
+
