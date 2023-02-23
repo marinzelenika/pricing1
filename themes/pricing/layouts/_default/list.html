@@ -52,9 +52,11 @@ transform.Unmarshal . }}
           
 
           <ul class="dropdown-menu">
-            
+            {{ $id := .Id }}
             {{ range $.Site.Pages }}
-            <li><a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+            {{ if eq .Params.FamilyId $id }}
+            <li><a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Params.Name }}</a></li>
+            {{ end }}
             {{ end }}
           </ul>
           
