@@ -16,6 +16,7 @@ transform.Unmarshal . }}
           src="{{ printf "https://%s" $imgUrl }}"
           width="50"
           height="50"
+          alt="{{ .Name }}"
         />
         {{ $split := split .Name " " }}
         {{ $splitName := index $split 0 }}
