@@ -1,62 +1,73 @@
 <div class="tab-pane fade show active" id="yearly">
-      <div class="row d-flex aligns-items-center justify-content-center">
-        
-            {{ with resources.GetRemote
-"https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false&enabledPPPOn=&clientkey=a&signature=jc_xWmdMtA-nMA2Bgp9vuEV0Kn0"
-}} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
-transform.Unmarshal . }}
-{{ range . }}
-{{ $url := print
-          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
-          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
-          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
-          transform.Unmarshal . }}
-        {{ range .Products }}
-            {{ $id := .Id }}
-            {{ if eq $id $.Page.Params.Id }}
-            {{ range .PricingPlans }}
-            {{ if not (strings.Contains .Name "Old Subscription") }}
-            {{ $name := .Name }}
-            {{ $ppId := .Id }}
-            {{ $lastchar := substr $name -1 }}
-            {{ if eq $lastchar "1" }}
-            {{ $onlyName := split $name "*" }}
-            
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>{{ index $onlyName 0 }}</strong></h5>
-                        {{ range .PaymentScheduleList }}
-                        <h3>${{ .SubscriptionPeriodCharge }}</h3>
-                        {{ end }}
-                        <p style="font-size: small;">with Free Support</p>
-                        {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" "" $ppId }}
-                        <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrl }}"><span style="margin: auto">Select</span></a>
-                        <hr>
-                        {{ range .PaymentScheduleList }}
-                        {{ $SubCharges := .SubscriptionPeriodCharge }}
-                        {{ $SubCharges }}
-                        {{ end }}
-                        {{ range .ProductItemsList }}
-                        {{ range .MeteredPriceList }}
-                        {{ .UnitPrice }}
-                        {{ end }}
-                        {{ end }}
-                        
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
+  <div class="row d-flex aligns-items-center justify-content-center">
+    {{ with resources.GetRemote
+    "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false&enabledPPPOn=&clientkey=a&signature=jc_xWmdMtA-nMA2Bgp9vuEV0Kn0"
+    }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+    transform.Unmarshal . }} {{ range . }} {{ $url := print
+    "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-" ""
+    .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{ warnf "%s" .
+    }} {{ else }} {{ with .Content }} {{ with transform.Unmarshal . }} {{ range
+    .Products }} {{ $id := .Id }} {{ if eq $id $.Page.Params.Id }} {{ range
+    .PricingPlans }} {{ if not (strings.Contains .Name "Old Subscription") }} {{
+    $name := .Name }} {{ $ppId := .Id }} {{ $lastchar := substr $name -1 }} {{
+    if eq $lastchar "1" }} {{ $onlyName := split $name "*" }}
 
-            
+    <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{ index $onlyName 0 }}</strong></h5>
+          {{ range .PaymentScheduleList }}
+          <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}</h3>
+          {{ end }}
+          <p style="font-size: small">with Free Support</p>
+          {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" ""
+          $ppId }}
+          <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrl }}"
+            ><span style="margin: auto">Select</span></a
+          >
+          <hr />
+          {{ range .PaymentScheduleList }} {{ $SubCharges :=
+          .SubscriptionPeriodCharge }}  
 
-{{ end }}{{ end }}
-{{ end }}{{ end }}
-{{ end }}{{ end }}
-        {{ end }} {{ end }}{{ end }}{{ end }}
-{{ end }}{{ end }}{{ end }}{{ end }}
-       
+            {{ with resources.GetRemote "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-support" }} {{ with .Err }} {{ warnf "%s" .
+    }} {{ else }} {{ with .Content }} {{ with transform.Unmarshal . }} {{ range $index, $value :=
+    .Products }}
+        {{ $supportName := .Name }}
+        {{ range $i, $j := .PricingPlans }}
+ 
+        {{ $lastchar := substr $j.Name -1 }} {{
+        if eq $lastchar "1" }}
+        {{ if eq $name .Name }}
+        {{ range .PaymentScheduleList }}
+        {{ if not (eq .SubscriptionPeriodCharge 599.00) }}
+        <h3 style="margin: 0;">${{ add $SubCharges .SubscriptionPeriodCharge }}</h3>
+        <p style="font-size: small;">with Paid Support</p>
+        {{ $linkUrlwPaidSupport := print "https://purchase.aspose.com/buy/cart?ppId=" ""
+          $ppId "&paidSupport=true" }}
+        <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidSupport }}"
+            ><span style="margin: auto">Select</span></a
+          >
+          <hr />
+        {{ end }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
+
+    {{ end }}{{ end }}{{ end }}{{ end }}
+    
+    <h3 style="margin: 0;">${{ .SubscriptionPeriodCharge }}</h3>
+    <p style="color: green; font-size: large; margin: 0;">+$5999</p>
+    <p style="font-size: small; color: grey; margin: 0">per developer, per month</p>
+    <p style="font-size: small">with Paid Consulting</p>
+    {{ $linkUrlwPaidConsulting := print "https://purchase.aspose.com/buy/cart?ppId=" ""
+          $ppId "&paidConsulting=true" }}
+        <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidConsulting }}"
+            ><span style="margin: auto">Select</span></a
+          >
+    {{ end }}
+
+        </div>
       </div>
     </div>
+
+    {{ end }}{{ end }} {{ end }}{{ end }} {{ end }}{{ end }} {{ end }} {{ end
+    }}{{ end }}{{ end }} {{ end }}{{ end }}{{ end }}{{ end }}
+  </div>
+</div>
