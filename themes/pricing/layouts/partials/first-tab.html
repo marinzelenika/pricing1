@@ -282,6 +282,28 @@
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
       </tr>
+      {{ if or (strings.Contains .Params.Name "C++") (strings.Contains .Params.Name "Android via Java") (strings.Contains .Params.Name "Python via .NET") (strings.Contains .Params.Name "Python via Java") (strings.Contains .Params.Name "SharePoint") (strings.Contains .Params.Name "Reporting Services") (strings.Contains .Params.Name "JasperReports")}}
+      <tr class="comp-table__columnGroup comp-table__tableRow">
+        <th scope="colgroup" class="comp-table__tableData" colspan="4">
+          <span>Can be used to create unlimited applications</span>
+        </th>
+      </tr>
+      <tr class="comp-table__tableRow comp-table__tableBodyRow">
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Can be used to create unlimited applications</th>
+        <td class="comp-table__tableData comp-table__tableDataCell ">
+          <span title="Feature is not included" class="comp-table__unicodeSymbolX">✗</span>
+        </td>
+        <td class="comp-table__tableData comp-table__tableDataCell ">
+          <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
+        </td>
+        <td class="comp-table__tableData comp-table__tableDataCell ">
+          <span title="Feature is not included" class="comp-table__unicodeSymbolX">✗</span>
+        </td>
+        <td class="comp-table__tableData comp-table__tableDataCell ">
+          <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
+        </td>
+      </tr>
+      {{ else }}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
           <span>Can be used to create unlimited applications</span>
@@ -302,6 +324,7 @@
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
       </tr>
+      {{ end }}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
           <span>Discount applied to multiple purchases</span>
