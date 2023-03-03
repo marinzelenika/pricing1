@@ -8,7 +8,7 @@
     .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{ warnf "%s" .
     }} {{ else }} {{ with .Content }} {{ with transform.Unmarshal . }} {{ range
     .Products }} {{ $id := .Id }} {{ if eq $id $.Page.Params.Id }} {{ range
-    .PricingPlans }} {{ if not (strings.Contains .Name "Old Subscription") }} {{
+    .PricingPlans }} {{ if not (or (strings.Contains .Name "Old Subscription") (lt .DisplayOrder 0)) }} {{
     $name := .Name }} {{ $ppId := .Id }} {{ $lastchar := substr $name -1 }} {{
     if eq $lastchar "1" }} {{ $onlyName := split $name "*" }}
 
