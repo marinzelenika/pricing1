@@ -93,9 +93,9 @@
   display: flex;
   justify-content: center; /* center horizontally */
   align-items: center; /* center vertically */
-  background-color: #e3e3e3;
+  background-color: #f5f5f5;
   padding: 2px;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 #myTab .nav-link.active, #myTab .nav-link:hover {
   background-color: $primary;

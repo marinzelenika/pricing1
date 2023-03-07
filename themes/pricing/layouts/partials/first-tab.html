@@ -62,7 +62,7 @@
             ><span style="margin: auto">Select</span></a
           >
     {{ end }}
-
+            
         </div>
       </div>
     </div>
@@ -264,11 +264,19 @@ project usage scenarios.">
       {{ if not (or (strings.Contains .Params.Name "SharePoint") (strings.Contains .Params.Name "Reporting Services") (strings.Contains .Params.Name "JasperReports"))}}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Allows external distribution</span>
+          <span>Allows external distribution <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Allows distribution of derived works to 
+third parties (e.g embedded in software
+ sold to others).">
+  <span style="margin-left: .5em; color: grey">&#63;</span>
+</span></span> 
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Allows external distribution</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Allows external distribution <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Allows distribution of derived works to 
+third parties (e.g embedded in software
+ sold to others).">
+  <span style="margin-left: .5em; color: grey">&#63;</span>
+</span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is not included" class="comp-table__unicodeSymbolX">✗</span>
         </td>
@@ -285,11 +293,19 @@ project usage scenarios.">
       {{ end }}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Royalty free</span>
+          <span>Royalty free <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Use the license without the need to pay 
+royalties or license fees for each use, per 
+each copy or volume sold.">
+  <span style="margin-left: .5em; color: grey">&#63;</span>
+</span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Royalty free</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Royalty free <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Use the license without the need to pay 
+royalties or license fees for each use, per 
+each copy or volume sold.">
+  <span style="margin-left: .5em; color: grey">&#63;</span>
+</span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
@@ -306,11 +322,19 @@ project usage scenarios.">
       {{ if not (or (strings.Contains .Params.Name "C++") (strings.Contains .Params.Name "Android via Java") (strings.Contains .Params.Name "Python via .NET") (strings.Contains .Params.Name "Python via Java") (strings.Contains .Params.Name "SharePoint") (strings.Contains .Params.Name "Reporting Services") (strings.Contains .Params.Name "JasperReports"))}}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Use in a development library, API or SDK</span>
+          <span>Use in a development library, API or SDK <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="If you produce software with an API for 
+other developers to use then this applies 
+to you.">
+  <span style="margin-left: .5em; color: grey">&#63;</span>
+</span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Use in a development library, API or SDK</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Use in a development library, API or SDK <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="If you produce software with an API for 
+other developers to use then this applies 
+to you.">
+  <span style="margin-left: .5em; color: grey">&#63;</span>
+</span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is not included" class="comp-table__unicodeSymbolX">✗</span>
         </td>
@@ -326,21 +350,57 @@ project usage scenarios.">
       </tr>
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>License type</span>
+          <span>License type <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Perpetual: The license to use the product 
+does not expire.
+
+Pay-per-use: Pay royalties for the use of 
+the product every month.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">License type</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">License type <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Perpetual: The license to use the product 
+does not expire.
+
+Pay-per-use: Pay royalties for the use of 
+the product every month.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></th>
         <td colspan="4" class="comp-table__tableData comp-table__tableDataCell ">Perpetual</td>
       </tr>
       {{ end }}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Updates and hotfixes for one year</span>
+          <span>Updates and hotfixes for one year <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="A purchase includes a subscription which 
+entitles you to one year of product 
+updates. 
+
+When the year has passed you are still 
+licensed to use to the product so your 
+existing applications that use Aspose will 
+continue to function but to download and 
+use further updates to the product you 
+first have to renew your subscription. 
+
+Note: This does not apply to Metered 
+licenses which are always up to date.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Updates and hotfixes for one year</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Updates and hotfixes for one year <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="A purchase includes a subscription which 
+entitles you to one year of product 
+updates. 
+
+When the year has passed you are still 
+licensed to use to the product so your 
+existing applications that use Aspose will 
+continue to function but to download and 
+use further updates to the product you 
+first have to renew your subscription. 
+
+Note: This does not apply to Metered 
+licenses which are always up to date.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
@@ -357,11 +417,17 @@ project usage scenarios.">
       {{ if or (strings.Contains .Params.Name "C++") (strings.Contains .Params.Name "Android via Java") (strings.Contains .Params.Name "Python via .NET") (strings.Contains .Params.Name "Python via Java") (strings.Contains .Params.Name "SharePoint") (strings.Contains .Params.Name "Reporting Services") (strings.Contains .Params.Name "JasperReports")}}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Can be used to create unlimited applications</span>
+          <span>Can be used to create unlimited applications <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="There are no limits to the number of 
+applications that you create with Aspose 
+products.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Can be used to create unlimited applications</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Can be used to create unlimited applications <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="There are no limits to the number of 
+applications that you create with Aspose 
+products.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is not included" class="comp-table__unicodeSymbolX">✗</span>
         </td>
@@ -378,11 +444,17 @@ project usage scenarios.">
       {{ else }}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Can be used to create unlimited applications</span>
+          <span>Can be used to create unlimited applications <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="There are no limits to the number of 
+applications that you create with Aspose 
+products.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Can be used to create unlimited applications</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Can be used to create unlimited applications <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="There are no limits to the number of 
+applications that you create with Aspose 
+products.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
@@ -399,11 +471,19 @@ project usage scenarios.">
       {{ end }}
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Discount applied to multiple purchases</span>
+          <span>Discount applied to multiple purchases <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Purchase multiple licenses and receive a 
+discount. Metered licenses contain in-built discounts 
+as adding extra developers does not 
+increase costs.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Discount applied to multiple purchases</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Discount applied to multiple purchases <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Purchase multiple licenses and receive a 
+discount. Metered licenses contain in-built discounts 
+as adding extra developers does not 
+increase costs.">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
@@ -419,11 +499,23 @@ project usage scenarios.">
       </tr>
       <tr class="comp-table__columnGroup comp-table__tableRow">
         <th scope="colgroup" class="comp-table__tableData" colspan="4">
-          <span>Free technical support</span>
+          <span>Free technical support <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Receive free technical support before 
+purchase or even if your maintenance 
+subscription has expired. 
+
+For priority support check out the paid 
+support options">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span></span>
         </th>
       </tr>
       <tr class="comp-table__tableRow comp-table__tableBodyRow">
-        <th class="comp-table__tableData comp-table__rowheader" scope="row">Free technical support</th>
+        <th class="comp-table__tableData comp-table__rowheader" scope="row">Free technical support <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Receive free technical support before 
+purchase or even if your maintenance 
+subscription has expired. 
+
+For priority support check out the paid 
+support options">
+  <span style="margin-left: .5em; color: grey">&#63;</span></span></th>
         <td class="comp-table__tableData comp-table__tableDataCell ">
           <span title="Feature is included" class="comp-table__unicodeSymbolCheck">✓</span>
         </td>
