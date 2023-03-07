@@ -53,8 +53,10 @@
     {{ end }}{{ end }}{{ end }}{{ end }}
     
     <h3 style="margin: 0;">${{ .SubscriptionPeriodCharge }}</h3>
+    <div class="wrapper">
     <p style="color: green; font-size: large; margin: 0;">+$5999</p>
-    <p style="font-size: small; color: grey; margin: 0">per developer, per month</p>
+    <p style="font-size: x-small; color: grey; margin: 0; margin-left: .2em">per developer, per month</p>
+    </div>
     <p style="font-size: small">with Paid Consulting</p>
     {{ $linkUrlwPaidConsulting := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidConsulting=true" }}

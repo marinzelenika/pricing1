@@ -1,12 +1,12 @@
 <head>
     <title>{{ .Title }}</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
         content="{{ .Params.Description }}" />
     <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#1A94D2" />
-
+    <meta name="theme-color" content="#0ebcc1">
+    <meta name="robots" content="index,follow">
     {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
 
     {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
