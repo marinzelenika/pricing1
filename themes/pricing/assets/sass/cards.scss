@@ -1,14 +1,21 @@
 .card {
     border: 0;
     box-shadow: 5px 10px 15px 5px rgba(0,0,0,0.1);
-    height: 510px;
-    padding: 1em 1.6em;
+    height: 515px;
+    padding: .6em 1.4em;
     border-radius: 10px;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 .card:hover {
   box-shadow: 10px 20px 30px 10px rgba(0,0,0,0.1);
+}
+.question-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 .fam-pack-btn{
     color: white;
@@ -48,7 +55,7 @@
   position: relative;
   text-align: center;
   margin-top: 0.7em;
-  margin-bottom: 0.35em;
+  margin-bottom: 0.3em;
   color: darkgray;
 }
 

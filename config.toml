@@ -1,6 +1,6 @@
 baseURL = 'https://purchase.aspose.com/'
 languageCode = 'en-us'
-title = 'Pricing information'
+title = 'aspose.com pricing information'
 theme = 'pricing'
 draft = "false"
 
