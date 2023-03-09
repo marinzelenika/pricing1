@@ -1,6 +1,6 @@
 baseURL = 'https://purchase.aspose.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Pricing information'
 theme = 'pricing'
 draft = "false"
 
