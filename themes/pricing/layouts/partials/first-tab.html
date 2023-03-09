@@ -40,7 +40,7 @@
         if eq $lastchar "1" }}
         {{ if eq $name .Name }}
         {{ range .PaymentScheduleList }}
-        {{ if not (eq .SubscriptionPeriodCharge 599.00) }}
+        {{ if not (eq (int .Id) 98086)}}
         <h3 style="margin: 0;">${{ add $SubCharges .SubscriptionPeriodCharge }}</h3>
         <p style="font-size: small;">with Paid Support</p>
         {{ $linkUrlwPaidSupport := print "https://purchase.aspose.com/buy/cart?ppId=" ""
