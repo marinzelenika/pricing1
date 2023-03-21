@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="container">
 {{ with resources.GetRemote
-"https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false&enabledPPPOn=&clientkey=a&signature=jc_xWmdMtA-nMA2Bgp9vuEV0Kn0"
+"https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false"
 }} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
 transform.Unmarshal . }}
 
