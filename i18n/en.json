@@ -107,6 +107,9 @@
     },
     "pricing": {
       "other": "Pricing"
+    },
+    "home-description": {
+      "other": "Enable your applications to manipulate Word, Excel, PDF, PowerPoint and more than 100 other file formats for all major platforms."
     }
   }
 ]
