@@ -77,6 +77,36 @@
     },
     "desc-Aspose.TeX Product Family": {
       "other": ""
+    },
+    "only-supported": {
+      "other": "This product is currently only supported for the .NET platform and therefore no family pack is available."
+    },
+    "from": {
+      "other": "from"
+    },
+    "per": {
+      "other": "per platform, per year"
+    },
+    "choose-platform": {
+      "other": "Choose a platform"
+    },
+    "or": {
+      "other": "or"
+    },
+    "getall": {
+      "other": "Get all platforms in a family pack starting from"
+    },
+    "select": {
+      "other": "Select family pack"
+    },
+    "family": {
+      "other": "Family"
+    },
+    "pricing-info": {
+      "other": "Pricing information"
+    },
+    "pricing": {
+      "other": "Pricing"
     }
   }
 ]

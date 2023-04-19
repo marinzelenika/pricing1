@@ -8,6 +8,14 @@ draft = "false"
   [[module.mounts]]
     source = 'prebuild/public/product'
     target = 'content'
+    lang = 'en'
+  [[module.mounts]]
+    source = 'prebuild/public/product'
+    target = 'content/de'
+    lang = 'de'
+  [[module.mounts]]
+    source = 'themes/pricing/content'
+    target = 'content'
   [[module.mounts]]
     source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     target = "assets/js/bootstrap.bundle.min.js"
@@ -17,9 +25,21 @@ draft = "false"
     url = "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false"
 
 
+[params.dynamicmenuid]
+  en = "aspose-en"
+  de = "aspose-de"
+
 defaultContentLanguage = 'en'
 [languages]
+  [languages.de]
+    languageName = 'Deutsch'
+    languageCode = "de"
+    contentDir = "content/de"
+    flag = "flag-de"
+    weight = 2
   [languages.en]
-    title = "Pricing information"
-    languageName = "English"
+    languageName = 'English'
+    flag = "flag-us"
+    languageCode = "en"
+    contentDir = "content"
     weight = 1

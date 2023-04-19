@@ -13,9 +13,10 @@
         {{ if strings.Contains $name "Metered" }}
 
         <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card text-center" style="margin:0 auto; height:595px; margin-bottom:2em;">
+        <div class="card text-center" style="margin:0 auto; height:620px; margin-bottom:2em;">
         <div class="card-body">
           <h5 class="card-title"><strong>{{ $name }}</strong></h5>
+          You can estimate monthly costs using our <a href="/metered-pricing/{{ $name | urlize }}">simulator</a><br>
           {{ range .PaymentScheduleList }}
           from
           <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}/month</h3>
