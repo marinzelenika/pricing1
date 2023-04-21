@@ -110,6 +110,33 @@
     },
     "home-description": {
       "other": "Enable your applications to manipulate Word, Excel, PDF, PowerPoint and more than 100 other file formats for all major platforms."
+    },
+    "estimate": {
+      "other": "You can estimate monthly costs using our"
+    },
+    "simulator": {
+      "other": "simulator"
+    },
+    "with-free-support": {
+      "other": "with Free support"
+    },
+    "with-paid-support": {
+      "other": "with Paid support"
+    },
+    "select-only": {
+      "other": "Select"
+    },
+    "per-developer-per-month": {
+      "other": "per developer, per month"
+    },
+    "with-paid-consulting": {
+      "other": "with Paid Consulting"
+    },
+    "month": {
+      "other": "month"
+    },
+    "year": {
+      "other": "year"
     }
   }
 ]

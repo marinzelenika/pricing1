@@ -34,12 +34,10 @@ defaultContentLanguage = 'en'
   [languages.de]
     languageName = 'Deutsch'
     languageCode = "de"
-    contentDir = "content/de"
     flag = "flag-de"
     weight = 2
   [languages.en]
     languageName = 'English'
     flag = "flag-us"
     languageCode = "en"
-    contentDir = "content"
     weight = 1

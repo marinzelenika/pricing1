@@ -20,11 +20,11 @@
           {{ range .PaymentScheduleList }}
           <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}</h3>
           {{ end }}
-          <p style="font-size: small">with Free Support</p>
+          <p style="font-size: small">{{ i18n "with-free-support" . }}</p>
           {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId }}
           <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrl }}"
-            ><span style="margin: auto">Select</span></a
+            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
           >
           <hr />
           {{ range .PaymentScheduleList }} {{ $SubCharges :=
@@ -42,11 +42,11 @@
         {{ range .PaymentScheduleList }}
         {{ if not (eq (int .Id) 98086)}}
         <h3 style="margin: 0;">${{ add $SubCharges .SubscriptionPeriodCharge }}</h3>
-        <p style="font-size: small;">with Paid Support</p>
+        <p style="font-size: small;">{{ i18n "with-paid-support" . }}</p>
         {{ $linkUrlwPaidSupport := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidSupport=true" }}
         <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidSupport }}"
-            ><span style="margin: auto">Select</span></a
+            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
           >
           <hr />
         {{ end }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
@@ -56,13 +56,13 @@
     <h3 style="margin: 0;">${{ .SubscriptionPeriodCharge }}</h3>
     <div class="wrapper">
     <p style="color: green; font-size: large; margin: 0;">+$5999</p>
-    <p style="font-size: x-small; color: grey; margin: 0; margin-left: .3em">per developer, per month</p>
+    <p style="font-size: x-small; color: grey; margin: 0; margin-left: .3em">{{ i18n "per-developer-per-month" . }}</p>
     </div>
-    <p style="font-size: small">with Paid Consulting</p>
+    <p style="font-size: small">{{ i18n "with-paid-consulting" . }}</p>
     {{ $linkUrlwPaidConsulting := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidConsulting=true" }}
         <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidConsulting }}"
-            ><span style="margin: auto">Select</span></a
+            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
           >
     {{ end }}
             

@@ -110,6 +110,33 @@
     },
     "home-description": {
       "other": "Ermöglichen Sie Ihren Anwendungen, Word, Excel, PDF, PowerPoint und mehr als 100 andere Dateiformate für alle wichtigen Plattformen zu bearbeiten."
+    },
+    "estimate": {
+      "other": "Mit unserem können Sie die monatlichen Kosten abschätzen"
+    },
+    "simulator": {
+      "other": "simulator"
+    },
+    "with-free-support": {
+      "other": "mit kostenloser Unterstützung"
+    },
+    "with-paid-support": {
+      "other": "mit kostenpflichtiger Unterstützung"
+    },
+    "select-only": {
+      "other": "Wählen"
+    },
+    "per-developer-per-month": {
+      "other": "pro Entwickler, pro Monat"
+    },
+    "with-paid-consulting": {
+      "other": "mit bezahlter Beratung"
+    },
+    "month": {
+      "other": "Monat"
+    },
+    "year": {
+      "other": "Jahr"
     }
   }
 ]

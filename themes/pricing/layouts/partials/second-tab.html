@@ -16,16 +16,16 @@
         <div class="card text-center" style="margin:0 auto; height:620px; margin-bottom:2em;">
         <div class="card-body">
           <h5 class="card-title"><strong>{{ $name }}</strong></h5>
-          You can estimate monthly costs using our <a href="/metered-pricing/{{ $name | urlize }}">simulator</a><br>
+          {{ i18n "estimate" . }} <a href="/metered-pricing/{{ $name | urlize }}">{{ i18n "simulator" .}}</a><br>
           {{ range .PaymentScheduleList }}
           from
-          <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}/month</h3>
+          <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}/{{ i18n "month" . }}</h3>
           {{ end }}
-          <p style="font-size: small">with Free Support</p>
+          <p style="font-size: small">{{ i18n "with-free-support" . }}</p>
           {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId }}
           <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrl }}"
-            ><span style="margin: auto">Select</span></a
+            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
           >
           <hr />
           {{ range .PaymentScheduleList }} {{ $SubCharges :=
@@ -39,14 +39,14 @@
         {{ if eq $name .Name }}
         {{ range .PaymentScheduleList }}
         {{ if not (eq (int .Id) 98103)}}
-        from
-        <h3 style="margin: 0;">${{ $SubCharges }}/month</h3>
-        <p style="margin: 0; color: green; font-size:medium">+{{ .SubscriptionPeriodCharge }}/year</p>
-        <p style="font-size: small;">with Paid Support</p>
+        {{ i18n "from" . }}
+        <h3 style="margin: 0;">${{ $SubCharges }}/{{ i18n "month" . }}</h3>
+        <p style="margin: 0; color: green; font-size:medium">+{{ .SubscriptionPeriodCharge }}/{{ i18n "year" . }} </p>
+        <p style="font-size: small;">{{ i18n "with-paid-support" . }}</p>
         {{ $linkUrlwPaidSupport := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidSupport=true" }}
         <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidSupport }}"
-            ><span style="margin: auto">Select</span></a
+            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
           >
           <hr />
         {{ end }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
@@ -56,13 +56,13 @@
     <h3 style="margin: 0;">${{ .SubscriptionPeriodCharge }}</h3>
     <div class="wrapper">
     <p style="color: green; font-size: large; margin: 0;">+$5999</p>
-    <p style="font-size: x-small; color: grey; margin: 0; margin-left: .3em;">per developer, per month</p>
+    <p style="font-size: x-small; color: grey; margin: 0; margin-left: .3em;">{{ i18n "per-developer-per-month" . }}</p>
     </div>
-    <p style="font-size: small">with Paid Consulting</p>
+    <p style="font-size: small">{{ i18n "with-paid-consulting" . }}</p>
     {{ $linkUrlwPaidConsulting := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidConsulting=true" }}
         <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidConsulting }}"
-            ><span style="margin: auto">Select</span></a
+            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
           >
 
     {{ end }}
