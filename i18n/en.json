@@ -137,6 +137,57 @@
     },
     "year": {
       "other": "year"
+    },
+    "developers-licensed": {
+      "other": "Developers licensed"
+    },
+    "derived-work": {
+      "other": "Used derived work at locations"
+    },
+    "enterprise-eployment": {
+      "other": "Enterprise Deployment"
+    },
+    "unlimited-servers": {
+      "other": "Deploy to unlimited servers"
+    },
+    "use-with-web-sites": {
+      "other": "For use with web sites/apps"
+    },
+    "external-distribution": {
+      "other": "Allows external distribution"
+    },
+    "use-in-a": {
+      "other": "Use in a development library, API or SDK"
+    },
+    "license-type": {
+      "other": "License type"
+    },
+    "perpetual": {
+      "other": "Perpetual"
+    },
+    "updates-and-hotfixes": {
+      "other": "Updates and hotfixes for one year"
+    },
+    "can-be-used": {
+      "other": "Can be used to create unlimited applications"
+    },
+    "discount-applied": {
+      "other": "Discount applied to multiple purchases"
+    },
+    "technical-support": {
+      "other": "Free technical support"
+    },
+    "note": {
+      "other": "Note: all prices are in"
+    },
+    "help-me-choose": {
+      "other": "Help me choose the correct license type"
+    },
+    "pay-per-use": {
+      "other": "Pay per use"
+    },
+    "yearly": {
+      "other": "Yearly"
     }
   }
 ]

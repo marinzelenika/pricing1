@@ -137,6 +137,60 @@
     },
     "year": {
       "other": "Jahr"
+    },
+    "developers-licensed": {
+      "other": "Entwickler lizenziert"
+    },
+    "derived-work": {
+      "other": "Abgeleitete Arbeit an Standorten verwendet"
+    },
+    "enterprise-eployment": {
+      "other": "Unternehmensbereitstellung"
+    },
+    "unlimited-servers": {
+      "other": "Bereitstellung auf unbegrenzten Servern"
+    },
+    "use-with-web-sites": {
+      "other": "Zur Verwendung mit Websites/Apps"
+    },
+    "external-distribution": {
+      "other": "Ermöglicht die externe Verteilung"
+    },
+    "royalty-free": {
+      "other": "Gebührenfrei"
+    },
+    "use-in-a": {
+      "other": "Verwendung in einer Entwicklungsbibliothek, API oder SDK"
+    },
+    "license-type": {
+      "other": "Lizenz-Typ"
+    },
+    "perpetual": {
+      "other": "Ewig"
+    },
+    "updates-and-hotfixes": {
+      "other": "Updates und Hotfixes für ein Jahr"
+    },
+    "can-be-used": {
+      "other": "Kann verwendet werden, um unbegrenzte Anwendungen zu erstellen"
+    },
+    "discount-applied": {
+      "other": "Rabatt gilt für mehrere Einkäufe"
+    },
+    "technical-support": {
+      "other": "Kostenloser technischer Support"
+    },
+    "note": {
+      "other": "Hinweis: Alle Preise sind in"
+    },
+    "help-me-choose": {
+      "other": "Helfen Sie mir, den richtigen Lizenztyp auszuwählen"
+    },
+    "pay-per-use": {
+      "other": "Bezahlen pro Benutzung"
+    },
+    "yearly": {
+      "other": "Jährlich"
     }
   }
 ]
