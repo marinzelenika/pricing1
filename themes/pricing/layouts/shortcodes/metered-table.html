@@ -1,34 +1,34 @@
 <table class="table table-responsive">
   <thead>
     <tr>
-      <th scope="col">Total Credits</th>
-      <th scope="col">Rate/Credit</th>
-      <th scope="col">Price/Month</th>
+      <th scope="col">{{ i18n "total-credits" .}}</th>
+      <th scope="col">{{ i18n "rate-credit" . }}</th>
+      <th scope="col">{{ i18n "price-month" . }}</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>0 to 8000</td>
-      <td><strong>Flat rate</strong></td>
-      <td><strong>$1999</strong> Fixed</td>
+      <td>0 {{ i18n "to" . }} 8000</td>
+      <td><strong>{{ i18n "flat-rate" . }}</strong></td>
+      <td><strong>$1999</strong> {{ i18n "fixed" . }} </td>
     </tr>
     <tr>
-      <td>Next 80000</td>
+      <td>{{ i18n "next" .}} 80000</td>
       <td><strong>$0.02</strong>/Credit</td>
       <td></td>
     </tr>
     <tr>
-      <td>Next 160000</td>
+      <td>{{ i18n "next" .}} 160000</td>
       <td><strong>$0.01</strong>/Credit</td>
       <td></td>
     </tr>
     <tr>
-      <td>Next 800000</td>
+      <td>{{ i18n "next" .}} 800000</td>
       <td><strong>$0.005</strong>/Credit</td>
       <td></td>
     </tr>
     <tr>
-      <td>Any additional</td>
+      <td>{{ i18n "any-additional" . }}</td>
       <td><strong>$0.002</strong>/Credit</td>
       <td></td>
     </tr>
@@ -37,14 +37,14 @@
 <form id="price-form">
          <div class="row">
                 <div class="col-md-6 col-12 mb-md-0 mb-3">
-                    <input type="number" class="form-control" id="credits" name="credits" min="0" step="1" placeholder="Total processed credits" required>
+                    <input type="number" class="form-control" id="credits" name="credits" min="0" step="1" placeholder="{{ i18n `processed-credits` . }}" required>
                 </div>
                 <div class="col-md-6 col-12">
-                    <button type="submit" class="btn btn-primary" style="color: white">Calculate</button>
+                    <button type="submit" class="btn btn-primary" style="color: white">{{ i18n "calculate" . }}</button>
                 </div>
             </div>
     </form>
-     <p class="mt-4">Total price: <span id="price-display">0</span> USD</p>
+     <p class="mt-4">{{ i18n "total-price" . }}: <span id="price-display">0</span> USD</p>
 
     <script>
         document.getElementById('price-form').addEventListener('submit', function (event) {

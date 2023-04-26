@@ -233,6 +233,39 @@
     },
     "expl15": {
       "other": "This does not apply to Metered licenses which are always up to date."
+    },
+    "total-credits": {
+      "other": "Total Credits"
+    },
+    "rate-credit": {
+      "other": "Rate/Credit"
+    },
+    "price-month": {
+      "other": "Price/Month"
+    },
+    "to": {
+      "other": "to"
+    },
+    "flat-rate": {
+      "other": "Flat rate"
+    },
+    "next": {
+      "other": "Next"
+    },
+    "fixed": {
+      "other": "Fixed"
+    },
+    "any-additional": {
+      "other": "Any additional"
+    },
+    "calculate": {
+      "other": "Calculate"
+    },
+    "processed-credits": {
+      "other": "Total processed credits"
+    },
+    "total-price": {
+      "other": "Total price"
     }
   }
 ]

@@ -236,6 +236,39 @@
     },
     "expl15": {
       "other": "Dies gilt nicht für Metered-Lizenzen, die immer auf dem neuesten Stand sind."
+    },
+    "total-credits": {
+      "other": "Gesamt Credits"
+    },
+    "rate-credit": {
+      "other": "Rate/Credit"
+    },
+    "price-month": {
+      "other": "Preis/Monat"
+    },
+    "to": {
+      "other": "bis"
+    },
+    "flat-rate": {
+      "other": "Pauschale"
+    },
+    "next": {
+      "other": "Nächste"
+    },
+    "fixed": {
+      "other": "Festpreis"
+    },
+    "any-additional": {
+      "other": "Irgendwelche zusätzlichen"
+    },
+    "calculate": {
+      "other": "Berechnung"
+    },
+    "processed-credits": {
+      "other": "Insgesamt verarbeitete Credits"
+    },
+    "total-price": {
+      "other": "Gesamtpreis"
     }
   }
 ]
