@@ -191,6 +191,51 @@
     },
     "yearly": {
       "other": "Jährlich"
+    },
+    "expl1": {
+      "other": "Entwickler: Ein Entwickler könnte a Softwareentwickler, ein System Administrator, Berichtersteller oder andere Person, die das Produkt verwendet. Jede Entwickler, der mit Aspose-Produkten arbeitet muss lizenziert werden."
+    },
+    "expl2": {
+      "other": "Ort: Ein Ort ist der physische Ort, an dem ein abgeleitetes Werk verwendet wird; jede eindeutige Adresse oder jedes Bürogebäude innerhalb oder außerhalb einer Organisation. Abgeleitete Arbeit: ein Softwareprogramm, eine Website, ein Report Builder oder eine andere Lösung, Arbeit oder ein Produkt, das Aspose-Produkte enthält oder verwendet."
+    },
+    "expl3": {
+      "other": "Ermöglicht die Verteilung abgeleiteter Werke an eine unbegrenzte Anzahl physischer oder virtueller Server an einer unbegrenzten Anzahl physischer Standorte (eindeutige Adresse oder Bürogebäude). Abgeleitete Arbeit: ein Softwareprogramm, eine Website, ein Report Builder oder eine andere Lösung, Arbeit oder ein Produkt, das Aspose-Produkte enthält oder verwendet."
+    },
+    "expl4": {
+      "other": "Ermöglicht die Verwendung des Produkts innerhalb einer App-Bereitstellung innerhalb eines Unternehmens (Unternehmen)"
+    },
+    "expl5": {
+      "other": "Ermöglicht die Verteilung abgeleiteter Werke an öffentlich zugängliche Websites/Anwendungen, Extranets, Intranets mit mehreren Standorten oder Nutzungsszenarien für SaaS-Projekte."
+    },
+    "expl6": {
+      "other": "Ermöglicht die Weitergabe abgeleiteter Werke an Dritte (z. B. eingebettet in Software, die an andere verkauft wird)."
+    },
+    "expl7": {
+      "other": "Verwenden Sie die Lizenz, ohne Lizenzgebühren oder Lizenzgebühren für jede Nutzung, für jede verkaufte Kopie oder jedes verkaufte Volumen bezahlen zu müssen."
+    },
+    "expl8": {
+      "other": "Wenn Sie Software mit einer API zur Verwendung durch andere Entwickler erstellen, gilt dies für Sie."
+    },
+    "expl9": {
+      "other": "Unbefristet: Die Lizenz zur Nutzung des Produkts läuft nicht ab. Pay-per-Use: Zahlen Sie jeden Monat Lizenzgebühren für die Nutzung des Produkts."
+    },
+    "expl10": {
+      "other": "Ein Kauf beinhaltet ein Abonnement, das Sie zu einem Jahr Produkt-Updates berechtigt. Nach Ablauf des Jahres sind Sie immer noch für die Nutzung des Produkts lizenziert, sodass Ihre bestehenden Anwendungen, die Aspose verwenden, weiterhin funktionieren, aber um weitere Updates für das Produkt herunterzuladen und zu verwenden, müssen Sie zuerst Ihr Abonnement erneuern. Hinweis: Dies gilt nicht für Metered-Lizenzen, die immer auf dem neuesten Stand sind."
+    },
+    "expl11": {
+      "other": "Der Anzahl der Anwendungen, die Sie mit Aspose-Produkten erstellen, sind keine Grenzen gesetzt."
+    },
+    "expl12": {
+      "other": "Der Anzahl der Anwendungen, die Sie mit Aspose-Produkten erstellen, sind keine Grenzen gesetzt."
+    },
+    "expl13": {
+      "other": "Kaufen Sie mehrere Lizenzen und erhalten Sie einen Rabatt. Gemessene Lizenzen enthalten eingebaute Rabatte, da das Hinzufügen zusätzlicher Entwickler die Kosten nicht erhöht."
+    },
+    "expl14": {
+      "other": "Erhalten Sie vor dem Kauf oder sogar nach Ablauf Ihres Wartungsabonnements kostenlosen technischen Support. Für vorrangigen Support sehen Sie sich die kostenpflichtigen Support-Optionen an"
+    },
+    "expl15": {
+      "other": "Dies gilt nicht für Metered-Lizenzen, die immer auf dem neuesten Stand sind."
     }
   }
 ]

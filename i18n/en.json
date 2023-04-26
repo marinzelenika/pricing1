@@ -188,6 +188,51 @@
     },
     "yearly": {
       "other": "Yearly"
+    },
+    "expl1": {
+      "other": "Developer: a Developer might be a software developer, a systems  administrator, report author or any other  person who uses the product. Each  developer working with Aspose products  needs to be licensed."
+    },
+    "expl2": {
+      "other": "Location: A Location is the physical location where a derived work is used; each distinct address or office building, within or outside an organization. Derived work: a software program, site, report builder or any other solution, work or product that incorporates or uses Aspose products."
+    },
+    "expl3": {
+      "other": "Allows distribution of derived works to an  unlimited number of physical or virtual  servers in an unlimited number of physical  locations (distinct address or office  building). Derived work: a software program, site, report builder or any other solution, work or product that incorporates or uses Aspose products."
+    },
+    "expl4": {
+      "other": "Allows the product to be used within one App Deployment within One Enterprise (Company)"
+    },
+    "expl5": {
+      "other": "Allows distribution of derived works to public facing websites/applications, extranets, multi-site intranets or SaaS project usage scenarios."
+    },
+    "expl6": {
+      "other": "Allows distribution of derived works to third parties (e.g embedded in software sold to others)."
+    },
+    "expl7": {
+      "other": "Use the license without the need to pay royalties or license fees for each use, per each copy or volume sold."
+    },
+    "expl8": {
+      "other": "If you produce software with an API for other developers to use then this applies to you."
+    },
+    "expl9": {
+      "other": "Perpetual: The license to use the product does not expire. Pay-per-use: Pay royalties for the use of the product every month."
+    },
+    "expl10": {
+      "other": "A purchase includes a subscription which entitles you to one year of product updates. When the year has passed you are still licensed to use to the product so your existing applications that use Aspose will continue to function but to download and use further updates to the product you first have to renew your subscription. Note: This does not apply to Metered licenses which are always up to date."
+    },
+    "expl11": {
+      "other": "There are no limits to the number of applications that you create with Aspose products."
+    },
+    "expl12": {
+      "other": "There are no limits to the number of applications that you create with Aspose products."
+    },
+    "expl13": {
+      "other": "Purchase multiple licenses and receive a discount. Metered licenses contain in-built discounts as adding extra developers does not increase costs."
+    },
+    "expl14": {
+      "other": "Receive free technical support before purchase or even if your maintenance subscription has expired. For priority support check out the paid support options"
+    },
+    "expl15": {
+      "other": "This does not apply to Metered licenses which are always up to date."
     }
   }
 ]
