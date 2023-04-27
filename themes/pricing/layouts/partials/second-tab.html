@@ -16,9 +16,15 @@
         <div class="card text-center" style="margin:0 auto; height:620px; margin-bottom:2em;">
         <div class="card-body">
           <h5 class="card-title"><strong>{{ $name }}</strong></h5>
-          {{ i18n "estimate" . }} <a href="/metered-pricing/{{ $name | urlize }}">{{ i18n "simulator" .}}</a><br>
+          {{ i18n "estimate" . }} 
+          {{ if eq .Site.LanguageCode "en" }}
+          <a href="/metered-pricing/{{ $name | urlize }}">
+          {{ else }}
+          <a href="{{ .Site.LanguageCode }}/metered-pricing/{{ $name | urlize }}">
+          {{ end }}
+          {{ i18n "simulator" .}}</a><br>
           {{ range .PaymentScheduleList }}
-          from
+          {{ i18n "from" . }}
           <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}/{{ i18n "month" . }}</h3>
           {{ end }}
           <p style="font-size: small">{{ i18n "with-free-support" . }}</p>
