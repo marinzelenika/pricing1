@@ -24,11 +24,11 @@
 
 {{/* 1. */}}{{ $string := $product }}
     {{/* 2. */}} {{ $filename := printf "product/%s.md" (urlize $productName) }} 
-    {{/* 2. */}} {{ $filenameDe := printf "product/%s.de.md" (urlize $productName) }} 
+
     {{/* 3. */}} {{ $resource := resources.FromString $filename $string }} 
-    {{/* 3. */}} {{ $resourceDe := resources.FromString $filenameDe $string }} 
+
     {{/* 4. */}} {{ $file := $resource.RelPermalink }}
-    {{/* 4. */}} {{ $fileDe := $resourceDe.RelPermalink }}
+
 
 
 
