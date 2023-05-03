@@ -13,20 +13,20 @@
     if eq $lastchar "1" }} {{ $onlyName := split $name "*" }}
 
     <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
-      <div class="card text-center">
+      <div class="card text-center product-card">
         <div class="card-body">
-          <h5 class="card-title" style="margin: 0;"><strong>{{ index $onlyName 0 }}</strong></h5>
+          <h5 class="card-title plan-title"><strong>{{ index $onlyName 0 }}</strong></h5>
           {{ if eq .Site.LanguageCode "en" }}
           <p style="font-size: x-small; color: grey;">{{ .LicenseNote }}</p>
           {{ end }}
           {{ range .PaymentScheduleList }}
-          <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}</h3>
+          <h3 style="margin-bottom: 3px">${{ .SubscriptionPeriodCharge }}</h3>
           {{ end }}
           <p style="font-size: small">{{ i18n "with-free-support" . }}</p>
           {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId }}
           <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrl }}"
-            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
+            ><span style="margin-top: 2px">{{ i18n "select-only" . }}</span></a
           >
           <hr />
           {{ range .PaymentScheduleList }} {{ $SubCharges :=
@@ -48,7 +48,7 @@
         {{ $linkUrlwPaidSupport := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidSupport=true" }}
         <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidSupport }}"
-            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
+            ><span style="margin-top: 2px">{{ i18n "select-only" . }}</span></a
           >
           <hr />
         {{ end }}{{ end }}{{ end }}{{ end }}{{ end }}{{ end }}
@@ -64,7 +64,7 @@
     {{ $linkUrlwPaidConsulting := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId "&paidConsulting=true" }}
         <a class="btn btn-primary btn-lg fam-pack-btn1" href="{{ $linkUrlwPaidConsulting }}"
-            ><span style="margin: auto">{{ i18n "select-only" . }}</span></a
+            ><span style="margin-top: 2px">{{ i18n "select-only" . }}</span></a
           >
     {{ end }}
             

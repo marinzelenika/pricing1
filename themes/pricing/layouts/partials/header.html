@@ -17,8 +17,13 @@
     {{ end }}
     </div>
     <div class="col-sm-3" style="display: flex; align-items: center;">
-      {{ if and (not (strings.Contains .Params.Name (i18n "pricing" .)) ) (not .IsHome) (not (strings.Contains .Params.Name (i18n "Metered" .)) ) }}
+      {{ if and (not (strings.Contains .Params.Name (i18n "pricing" .)) ) (not .IsHome) }}
       <img src="{{ printf "https://%s" .Params.LargeImg }}" alt="{{ .Params.Name }} logo" width="43%">
+      {{ end }}
+    </div>
+    <div class="col-sm-3">
+      {{ if .IsHome }}
+      <a class="btn btn-primary btn-lg temp-license-btn" href="https://purchase.aspose.com/temporary-license/">Get a temporary license</a>
       {{ end }}
     </div>
     </div>

@@ -10,6 +10,9 @@
 .card:hover {
   box-shadow: 10px 20px 30px 10px rgba(0,0,0,0.1);
 }
+.plan-title {
+  margin-bottom: 1.2em;
+}
 .question-mark {
   position: absolute;
   top: 0;
@@ -119,6 +122,10 @@
     vertical-align: middle;
     align-items: center;
     border-radius: 35px;
+}
+.product-card{
+  height: 550px;
+  padding: 20px 10px;
 }
 
 

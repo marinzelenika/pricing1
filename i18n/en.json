@@ -156,6 +156,9 @@
     "external-distribution": {
       "other": "Allows external distribution"
     },
+    "royalty-free": {
+      "other": "Royalty free"
+    },
     "use-in-a": {
       "other": "Use in a development library, API or SDK"
     },
@@ -266,6 +269,9 @@
     },
     "total-price": {
       "other": "Total price"
+    },
+    "metered": {
+      "other": "Metered"
     }
   }
 ]
