@@ -116,6 +116,16 @@ transform.Unmarshal . }}
   {{ end }}
 </div>
 {{ end }}{{ end }}{{ end }}{{ end }}
+<h2 class="mt-5">Knowledgebase</h2>
+{{- range where .Site.RegularPages "Type" "knowledgebase" -}}
+<div class="card border-primary mb-3" style="height:fit-content; margin-top: 1rem; cursor: pointer" onclick="window.location='{{ .RelPermalink }}';">
+  <div class="card-header">{{ .Params.date | time.Format ":date_long" }}</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">{{ .Params.title }}</h5>
+    <p class="card-text">{{ .Params.description }}</p>
+  </div>
+</div>
+{{ end }}
 
 </div>
 {{ end }}
