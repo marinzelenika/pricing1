@@ -15,6 +15,7 @@ There are several reasons why Word to PDF conversion can result in text overlap.
 One of the main reasons why text overlap occurs is due to differences in how Word and PDF files handle page layout and font sizes. Word documents may look great on your computer screen, but when you convert them to PDF, the layout can shift, causing text to overlap.
 
 Differences in how Word and PDF files handle page layout and font sizes:
+```
 <table>
   <tr>
     <th>Word Files</th>
@@ -33,7 +34,7 @@ Differences in how Word and PDF files handle page layout and font sizes:
     <td>Does not support dynamic page elements, but can add static elements such as watermarks and page numbers.</td>
   </tr>
 </table>
-
+```
 Another reason for text overlap is when the Word document has complex formatting, such as multiple columns, tables, and images. These formatting elements can be challenging to convert accurately, resulting in text overlap.
 The good news is that there is a solution to this problem.
 
